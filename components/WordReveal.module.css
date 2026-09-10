@@ -1,0 +1,26 @@
+.root {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: clamp(24px, 3.5vw, 50px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.16;
+  max-width: 22ch;
+}
+
+.word {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.26em;
+  white-space: nowrap;
+}
+
+/* Ghost holds the layout box at full opacity 0.16; live layers on top. */
+.ghost {
+  opacity: 0.16;
+}
+
+.live {
+  position: absolute;
+  inset: 0;
+}

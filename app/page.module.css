@@ -1,0 +1,149 @@
+.sectionHead {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: end;
+  margin-bottom: clamp(34px, 4vw, 60px);
+}
+
+.headSup {
+  font-family: var(--font-geist), Geist, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--fg-dimmer);
+  vertical-align: top;
+  margin-left: 10px;
+  position: relative;
+  top: 0.35em;
+}
+
+.workFoot {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: clamp(28px, 3vw, 44px);
+}
+
+/* ---- marquee CTA band ---- */
+
+.ctaBand {
+  border-block: 1px solid var(--line);
+  padding-block: clamp(18px, 2.4vw, 32px);
+  background: var(--bg-2);
+  overflow: hidden;
+}
+
+.ctaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(18px, 2.6vw, 38px);
+  padding-right: clamp(18px, 2.6vw, 38px);
+  flex: none;
+  white-space: nowrap;
+  font-size: clamp(24px, 4.4vw, 60px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  transition: color 0.4s var(--ease);
+}
+
+.ctaItem:hover {
+  color: var(--accent);
+}
+
+.ctaDot {
+  width: 0.1em;
+  height: 0.1em;
+  min-width: 6px;
+  min-height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+/* ---- approach ---- */
+
+.approachGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(22px, 3vw, 48px);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+.approachBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.approachLede {
+  font-size: clamp(15px, 1.25vw, 18px);
+  line-height: 1.6;
+  letter-spacing: -0.018em;
+  color: var(--ink-dim);
+  max-width: 56ch;
+}
+
+.processWrap {
+  padding-top: 8px;
+}
+
+/* ---- manifesto ---- */
+
+.manifesto {
+  background: var(--bg-2);
+  border-block: 1px solid var(--line);
+}
+
+.manifestoGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.manifestoLeft {
+  padding-top: 8px;
+}
+
+.manifestoFoot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-top: clamp(36px, 4.5vw, 64px);
+  padding-top: clamp(24px, 3vw, 36px);
+  border-top: 1px solid var(--line);
+}
+
+/* ---- faq ---- */
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(24px, 3vw, 48px);
+  align-items: start;
+}
+
+/* ---- breakpoints ---- */
+
+@media (min-width: 860px) {
+  .sectionHead {
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+    gap: 48px;
+  }
+
+  .approachGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  }
+
+  .manifestoGrid {
+    grid-template-columns: minmax(150px, 0.4fr) minmax(0, 1.6fr);
+    gap: 40px;
+  }
+
+  .faqGrid {
+    grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.6fr);
+  }
+}

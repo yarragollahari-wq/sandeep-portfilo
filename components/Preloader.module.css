@@ -1,0 +1,40 @@
+.root {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: var(--bg-3);
+  display: grid;
+  place-content: center;
+  gap: 26px;
+  padding-inline: 20px;
+}
+
+.mark {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  font-size: clamp(29px, 6.6vw, 78px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.mark span {
+  display: inline-block;
+}
+
+.reg {
+  font-size: 0.4em;
+  color: var(--accent);
+  align-self: flex-start;
+  margin-left: 2px;
+}
+
+.bar {
+  width: min(240px, 52vw);
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transform-origin: left center;
+  justify-self: center;
+}

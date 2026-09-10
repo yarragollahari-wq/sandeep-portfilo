@@ -1,0 +1,230 @@
+.header {
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 90;
+  padding-block: 14px;
+  transition: background 0.4s var(--ease), backdrop-filter 0.4s var(--ease), padding 0.4s var(--ease);
+}
+
+.scrolled {
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+  padding-block: 10px;
+}
+
+.inner {
+  width: 100%;
+  max-width: var(--maxw);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* ---- logo ---- */
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  flex: none;
+}
+
+.logoPhoto {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--panel-2);
+  /* Accent ring, same device as the portrait in the about card. */
+  box-shadow: 0 0 0 1.5px var(--accent), 0 0 0 4px rgba(199, 255, 151, 0.14);
+  transition: box-shadow 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.logo:hover .logoPhoto {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 1.5px var(--accent), 0 0 0 6px rgba(199, 255, 151, 0.2);
+}
+
+/* ---- desktop links ---- */
+
+.links {
+  display: none;
+  align-items: center;
+  gap: 4px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.link {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 8px 15px;
+  border-radius: var(--r-pill);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: var(--fg-dim);
+  transition: color 0.24s var(--ease), background 0.24s var(--ease);
+}
+
+.link:hover {
+  color: var(--fg);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.count {
+  font-family: var(--font-geist), Geist, sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: none;
+}
+
+.cta {
+  display: none;
+  padding: 11px 20px;
+  font-size: 13px;
+}
+
+/* ---- burger ---- */
+
+.burger {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid var(--line-strong);
+  display: grid;
+  place-content: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.04);
+  transition: background 0.24s var(--ease);
+}
+
+.burger:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.burger span {
+  display: block;
+  width: 16px;
+  height: 1.5px;
+  background: var(--fg);
+  border-radius: 2px;
+  transition: transform 0.34s var(--ease), opacity 0.24s var(--ease);
+}
+
+.burger span[data-open='true']:first-child {
+  transform: translateY(3.25px) rotate(45deg);
+}
+
+.burger span[data-open='true']:last-child {
+  transform: translateY(-3.25px) rotate(-45deg);
+}
+
+/* ---- mobile overlay ---- */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 85;
+  background: var(--bg-3);
+  overflow-y: auto;
+}
+
+.overlayInner {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 104px var(--gutter) 40px;
+  max-width: var(--maxw);
+  margin-inline: auto;
+}
+
+.overlayLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.overlayLinks a {
+  display: block;
+  padding-block: 10px;
+  font-size: clamp(38px, 12vw, 66px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1.05;
+  transition: color 0.24s var(--ease);
+}
+
+.overlayLinks a:hover {
+  color: var(--accent);
+}
+
+.overlayFoot {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 48px;
+  align-items: flex-end;
+  padding-top: 28px;
+  border-top: 1px solid var(--line);
+}
+
+.overlayContact {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+}
+
+.overlayContact a {
+  color: var(--fg-dim);
+  transition: color 0.2s var(--ease);
+}
+
+.overlayContact a:hover {
+  color: var(--accent);
+}
+
+.overlayContact .micro {
+  margin-bottom: 4px;
+}
+
+.overlayCopy {
+  margin-left: auto;
+  font-size: 12px;
+  color: var(--fg-dimmer);
+}
+
+/* ---- breakpoints ---- */
+
+@media (min-width: 900px) {
+  .links {
+    display: flex;
+  }
+
+  .cta {
+    display: inline-flex;
+  }
+
+  .burger {
+    display: none;
+  }
+}

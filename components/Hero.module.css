@@ -1,0 +1,266 @@
+.root {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-top: 124px;
+  padding-bottom: 0;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+/* A single soft radial lift behind the wordmark, same as the reference. */
+.glow {
+  position: absolute;
+  z-index: -1;
+  top: 8%;
+  left: 50%;
+  width: min(1100px, 130vw);
+  aspect-ratio: 1.5;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(199, 255, 151, 0.11) 0%,
+    rgba(199, 255, 151, 0.04) 34%,
+    transparent 68%
+  );
+  pointer-events: none;
+}
+
+.inner {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(28px, 4vw, 52px);
+  padding-bottom: clamp(40px, 5vw, 72px);
+}
+
+/* ---- badge ---- */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  align-self: flex-start;
+  padding: 8px 15px 8px 12px;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--r-pill);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 0 rgba(199, 255, 151, 0.6);
+  animation: pulse 2.6s var(--ease) infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(199, 255, 151, 0.55);
+  }
+  70% {
+    box-shadow: 0 0 0 8px rgba(199, 255, 151, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(199, 255, 151, 0);
+  }
+}
+
+/* ---- wordmark ---- */
+
+.wordmark {
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(54px, 12.2vw, 172px);
+  font-weight: 600;
+  letter-spacing: -0.065em;
+  line-height: 0.87;
+  margin-left: -0.012em;
+}
+
+.wordmarkLine {
+  display: flex;
+  align-items: flex-start;
+}
+
+.wordmarkLine > span {
+  display: inline-block;
+  white-space: pre;
+}
+
+.reg {
+  font-size: 0.19em;
+  color: var(--accent);
+  letter-spacing: 0;
+  margin-left: 0.06em;
+  margin-top: 0.12em;
+}
+
+.wordmarkSub {
+  display: inline-block;
+  color: var(--fg-dimmer);
+  padding-left: 0.012em;
+}
+
+/* ---- three-column bed ---- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(28px, 3.5vw, 48px);
+  padding-top: clamp(20px, 3vw, 36px);
+  border-top: 1px solid var(--line);
+}
+
+.pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--fg-dim);
+}
+
+.pillars li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pillarDash {
+  width: 14px;
+  height: 1px;
+  background: var(--accent);
+  flex: none;
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 46ch;
+}
+
+.statementText {
+  font-size: clamp(16px, 1.4vw, 20px);
+  line-height: 1.48;
+  letter-spacing: -0.02em;
+  color: var(--fg-dim);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* ---- stat card ---- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-panel);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.015));
+}
+
+.cardStat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cardStatValue {
+  font-size: clamp(38px, 4vw, 54px);
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  color: var(--accent);
+}
+
+.cardStatLabel {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--fg-dim);
+}
+
+.cardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  transition: color 0.24s var(--ease), gap 0.24s var(--ease);
+}
+
+.cardLink:hover {
+  color: var(--accent);
+  gap: 12px;
+}
+
+/* ---- bottom ticker ---- */
+
+.ticker {
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  padding-block: 15px;
+  background: rgba(255, 255, 255, 0.015);
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 26px;
+  padding-right: 26px;
+  flex: none;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: var(--fg-dim);
+  white-space: nowrap;
+}
+
+.tickerDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex: none;
+}
+
+/* ---- breakpoints ---- */
+
+@media (min-width: 760px) {
+  .grid {
+    grid-template-columns: minmax(160px, 0.7fr) minmax(0, 1.5fr);
+    align-items: start;
+  }
+
+  .card {
+    grid-column: 1 / -1;
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1080px) {
+  .grid {
+    grid-template-columns: minmax(180px, 0.72fr) minmax(0, 1.5fr) minmax(280px, 0.95fr);
+  }
+
+  .card {
+    grid-column: auto;
+    max-width: none;
+  }
+}

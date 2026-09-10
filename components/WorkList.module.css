@@ -1,0 +1,252 @@
+.root {
+  position: relative;
+}
+
+.list {
+  border-top: 1px solid var(--line);
+}
+
+.section--light .list {
+  border-color: var(--ink-line);
+}
+
+.item {
+  border-bottom: 1px solid var(--line);
+  transition: opacity 0.42s var(--ease);
+}
+
+.item[data-dim='true'] {
+  opacity: 0.34;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    'index main go'
+    '. metric go'
+    '. year go';
+  align-items: center;
+  gap: 6px 16px;
+  padding-block: clamp(22px, 2.6vw, 34px);
+  position: relative;
+}
+
+/* the accent wipe that sweeps in on hover */
+.row::before {
+  content: '';
+  position: absolute;
+  inset: 0 calc(var(--gutter) * -0.5);
+  border-radius: var(--r-card);
+  background: rgba(255, 255, 255, 0.035);
+  opacity: 0;
+  transition: opacity 0.34s var(--ease);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.item:hover .row::before {
+  opacity: 1;
+}
+
+.index {
+  grid-area: index;
+  align-self: start;
+  font-family: var(--font-geist), Geist, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--fg-dimmer);
+  padding-top: 0.6em;
+  min-width: 34px;
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.title {
+  font-size: clamp(26px, 4.4vw, 60px);
+  font-weight: 600;
+  letter-spacing: -0.055em;
+  line-height: 1.02;
+  transition: color 0.3s var(--ease), transform 0.42s var(--ease);
+  display: inline-block;
+}
+
+.item:hover .title {
+  color: var(--accent);
+  transform: translateX(8px);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 9px;
+  font-size: 12.5px;
+  letter-spacing: -0.015em;
+  color: var(--fg-dim);
+}
+
+.metaDot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--fg-dimmer);
+  flex: none;
+}
+
+.metric {
+  grid-area: metric;
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  padding-top: 4px;
+}
+
+.metricValue {
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.045em;
+  color: var(--accent);
+}
+
+.metricLabel {
+  font-size: 12.5px;
+  color: var(--fg-dim);
+}
+
+.year {
+  grid-area: year;
+  font-family: var(--font-geist), Geist, sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--fg-dimmer);
+  padding-top: 2px;
+}
+
+.go {
+  grid-area: go;
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: grid;
+  place-content: center;
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  color: var(--fg-dim);
+  transition:
+    background 0.32s var(--ease),
+    color 0.32s var(--ease),
+    border-color 0.32s var(--ease),
+    transform 0.42s var(--ease);
+}
+
+.go svg {
+  width: 15px;
+  height: 15px;
+}
+
+.item:hover .go {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--ink);
+  transform: rotate(45deg);
+}
+
+/* ---- cursor-following card ---- */
+
+.float {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+  display: none;
+}
+
+.floatCard {
+  position: absolute;
+  top: 22px;
+  left: 26px;
+  width: 232px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 18px;
+  border-radius: var(--r-card);
+  background: var(--accent);
+  color: var(--ink);
+  box-shadow: 0 24px 60px -18px rgba(0, 0, 0, 0.65);
+}
+
+.floatKicker {
+  font-family: var(--font-geist), Geist, sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  opacity: 0.62;
+}
+
+.floatValue {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.floatLabel {
+  font-size: 12.5px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+}
+
+.floatServices {
+  margin-top: 5px;
+  padding-top: 9px;
+  border-top: 1px solid rgba(10, 10, 10, 0.18);
+  font-size: 11px;
+  line-height: 1.4;
+  opacity: 0.72;
+}
+
+/* ---- breakpoints ---- */
+
+@media (min-width: 860px) {
+  .row {
+    grid-template-columns: 48px minmax(0, 1fr) minmax(0, 0.62fr) 84px 44px;
+    grid-template-areas: 'index main metric year go';
+    align-items: center;
+    gap: 24px;
+  }
+
+  .index {
+    align-self: center;
+    padding-top: 0;
+  }
+
+  .metric {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3px;
+    padding-top: 0;
+  }
+
+  .year {
+    text-align: right;
+    padding-top: 0;
+  }
+}
+
+@media (hover: hover) and (min-width: 1080px) {
+  .float {
+    display: block;
+  }
+}
