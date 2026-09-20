@@ -467,7 +467,7 @@ export const caseStudies: CaseStudy[] = [
         points: [
           {
             label: 'What we are doing about it',
-            text: 'We designed a plan to route after-hours calls to a voice AI agent that answers live, handles the enquiry and converts it into a booking — so calls arriving at 9pm or 6am are captured at the moment of intent rather than ringing into an empty studio.',
+            text: 'We designed a plan to route after-hours calls to a voice AI agent that answers live, handles the enquiry and converts it into a booking — so calls arriving at 9pm or 6am are captured at the moment of intent rather than ringing into an empty studio. It has since been built and shipped: case study 005 covers what happened next.',
           },
           {
             label: 'Why this and not more budget',
@@ -495,7 +495,7 @@ export const caseStudies: CaseStudy[] = [
       },
     ],
     closing:
-      '451 lead events in 65 days across five studios at $28.22 each — and the cheapest leads in the account arriving in the hours the doors are locked, with a plan on the table to answer them.',
+      '451 lead events in 65 days across five studios at $28.22 each — and the cheapest leads in the account arriving in the hours the doors are locked. Case study 005 is what we built to answer them.',
     accent: '#c7ff97',
   },
 
@@ -644,6 +644,206 @@ export const caseStudies: CaseStudy[] = [
     ],
     closing:
       '668 qualified conversations at AED 9.53, from AED 6,365 and a channel we were not originally planning to rely on — in a category where the intended sales route was never available to us at all.',
+    accent: '#c7ff97',
+  },
+  /* ======================================================================
+     05 — LASH & BEAUTY FRANCHISE · CALL-ONLY + AI · HOUSTON, USA
+     ====================================================================== */
+  {
+    slug: 'beauty-franchise-call-only-ai',
+    index: '005',
+    title: 'Answering the night shift',
+    subtitle:
+      'We moved the budget off search before the client asked us to, bought phone calls at a ninth of the price — then built the AI system that answers the ones arriving after closing time.',
+    industry: 'Lash & Beauty Franchise',
+    niche: 'Membership studios, five locations',
+    market: 'Houston, Texas, United States',
+    year: '2026',
+    duration: '90 days inside a 2-year engagement',
+    services: [
+      'Meta Ads',
+      'Call-only campaign architecture',
+      'Multi-location strategy',
+      'AI voice receptionist',
+      'Booking automation',
+      'Reporting & analysis',
+    ],
+    summary:
+      'Search was still producing leads, so nobody had asked us to change anything. We changed it anyway — because a phone-call lead was costing $225 there and $23 on paid social. Over the following 90 days call-only campaigns produced 496 phone calls at $30.64 each, and we built and shipped the AI receptionist that answers the 41.5% of them arriving after the doors are locked.',
+    cardMetric: { value: '9.6x', label: 'Cheaper than the channel it replaced' },
+    metrics: [
+      { value: '496', label: 'Phone calls placed', note: 'across five studios in 90 days' },
+      { value: '$30.64', label: 'Cost per phone call', note: 'blended, all locations' },
+      { value: '−41%', label: 'Blended cost per lead', note: '$58.00 → $33.99 in three months' },
+      { value: '206', label: 'Calls after hours', note: '41.5% — now answered by AI' },
+    ],
+    chapters: [
+      {
+        kicker: 'The decision',
+        title: 'We moved the money before the client asked us to',
+        body: [
+          'This is the part of the engagement most agencies would not have initiated. Search was not broken in any way that shows up in a status meeting. It was live, it was spending, it was reporting conversions, and the client had not complained. The honest read of the account was that it had stopped being the right place for this budget, and nobody was going to tell us that except the numbers.',
+          'Across the first month of this window, search absorbed 67% of total ad spend and returned 17% of the phone calls. A phone-call lead cost $225.62 there. The same lead cost $23.07 on paid social. By the following month search had deteriorated to $561.48 per call while taking 28% of the budget for 2% of the calls. Continuing would have been defensible — the campaigns were optimised, the keywords were tight, the reports looked busy. It would also have been wrong.',
+          'So we recommended reallocating almost the entire budget to paid social call-only campaigns, and we brought the recommendation with the replacement already built rather than as a problem for the client to weigh up. Search was wound down and eventually paused. It is a strange thing to argue yourself out of a channel you are being paid to run, and it was plainly the right call.',
+        ],
+        points: [
+          {
+            label: 'Why call-only specifically',
+            text: 'This business does not sell online. It sells a booked appointment that becomes a recurring membership, and the booking happens on the phone. Paid social lets us buy that exact action — a tap that dials the studio directly — with no landing page, no form, and no drop-off in between. Search could no longer isolate the same objective cleanly, which is precisely what pushed us off it.',
+          },
+          {
+            label: 'The trade we accepted',
+            text: 'Search intent is higher by definition: someone typing “lash extensions near me” is further down the funnel than someone shown an ad in a feed. We gave that up knowingly. At a 9.6x price difference per call, the lower average intent of paid social was a trade worth making, and the connect-rate data later confirmed the demand was real rather than accidental.',
+          },
+        ],
+        table: {
+          title: 'The two channels, side by side, in the same months',
+          note: 'Phone-call leads only. Directions and map actions are tracked separately and are not counted as leads in either channel. Search was paused entirely from month three, so the combined row covers months one and two — the only period both channels ran.',
+          head: ['Month', 'Search — cost / call', 'Paid social — cost / call', 'Search % of spend', 'Search % of calls'],
+          rows: [
+            ['Month 1', '$225.62', '$23.07', '67%', '17%'],
+            ['Month 2', '$561.48', '$32.00', '28%', '2%'],
+            ['Month 3', 'Paused', '$33.99', '—', '—'],
+            ['Combined', '$271.84', '$28.39', '48%', '9%'],
+          ],
+        },
+        pull: 'Sticking with search would have been the safe, invisible choice. Nobody audits an agency for the channel it kept running. They audit it for the one it moved too late.',
+      },
+      {
+        kicker: 'The build',
+        title: 'One campaign per studio, one action, no pooled averages',
+        body: [
+          'Five studios, five separate campaigns, each pointed at its own phone line. A franchise operator earns per location, not per group average, so each studio is funded and judged on its own cost per call. Pooled into one campaign, the algorithm quietly funnels budget to whichever location converts most cheaply and starves the rest — which reads as a healthy blended number in the report while a real studio sits with a silent phone.',
+          'Delivery was kept continuous rather than scheduled to opening hours. Restricting delivery windows repeatedly pushes campaigns back into learning, so tidier call timing is bought with worse efficiency across the whole account. We took the efficiency and solved the timing problem downstream, on the business side — which is the thread that runs through the rest of this case study.',
+          'From month two we layered in customer-level optimisation, feeding the platform the operator’s own customer profiles so the algorithm targets people who resemble the studios’ best existing members rather than a demographic guess. Creative is cycled deliberately and often: the delivery algorithm matches assets to users, and stale assets raise cost per call long before anything else in the account does.',
+        ],
+        table: {
+          title: 'Ninety days, by studio',
+          note: 'Studios anonymised. Studio E ran for the final month only, having been paused at the operator’s request for the two prior months. Totals are the sum of the campaign lines.',
+          head: ['Studio', 'Spend', 'Clicks', 'Phone calls', 'Cost / call'],
+          rows: [
+            ['Studio A', '$3,292.90', '2,332', '171', '$19.26'],
+            ['Studio B', '$3,477.96', '2,545', '109', '$31.91'],
+            ['Studio C', '$4,883.75', '2,982', '133', '$36.72'],
+            ['Studio D', '$2,557.45', '2,128', '53', '$48.25'],
+            ['Studio E', '$984.58', '529', '30', '$32.82'],
+            ['All studios', '$15,196.64', '10,516', '496', '$30.64'],
+          ],
+        },
+      },
+      {
+        kicker: 'The result',
+        title: 'More leads, on less money, every month',
+        body: [
+          'The clearest way to read this engagement is not the paid-social number in isolation — it is what happened to the operator’s total marketing bill and total lead volume at the same time. Across the three months, total ad spend across every channel fell by 20% while total phone-call leads rose by 37%.',
+          'Blended cost per phone-call lead went from $58.00 to $33.99, a 41% reduction, and that figure includes the wasted search spend still sitting in the first month. The business is now buying substantially more of the only outcome it cares about, for materially less money, from a single channel it was not using at the start of the year.',
+          'Cost per call did rise within paid social as we scaled — $23.07 to $32.00 to $33.99. That is the expected cost of moving past the cheapest, highest-intent slice of an audience, and it is the correct trade at this volume: month three bought 199 calls where month one bought 120. We report the rise rather than quoting the opening month and calling it the result.',
+        ],
+        table: {
+          title: 'Paid social, month by month',
+          note: 'Phone calls are platform-counted call events on the call-only campaigns. Cost per call is campaign spend ÷ phone calls.',
+          head: ['Month', 'Spend', 'Clicks', 'Phone calls', 'Cost / call'],
+          rows: [
+            ['Month 1', '$2,768.86', '1,147', '120', '$23.07'],
+            ['Month 2', '$5,664.44', '4,541', '177', '$32.00'],
+            ['Month 3', '$6,763.34', '4,828', '199', '$33.99'],
+            ['Combined', '$15,196.64', '10,516', '496', '$30.64'],
+          ],
+        },
+        pull: 'Total spend down 20%. Total phone leads up 37%. The saving and the growth came from the same decision.',
+      },
+      {
+        kicker: 'The quality check',
+        title: 'The calls got better while they got cheaper',
+        body: [
+          'Volume alone is the easiest number to flatter. A campaign can generate a great many dials that end two seconds after they connect, and the report will still read well. So we measure how long each call stays alive: a dial is intent, a call still connected at twenty seconds is a real person, and a call past sixty seconds is a conversation long enough to have covered a service, a price and a date.',
+          'Every one of those measures improved across the three months, in both absolute and percentage terms. Sixty-second conversations nearly tripled, from 14 to 41, and rose from 11.7% of calls to 20.6%. Callback requests — people who asked to be rung back rather than waiting — went from 5 a month to 27.',
+          'That combination is the one worth having. Cost per call rose modestly as we scaled, and the proportion of those calls turning into real conversations rose faster. The customer-level optimisation introduced in month two is the most likely driver, and we state that as the reading of the data rather than as a proven cause.',
+        ],
+        table: {
+          title: 'Call quality, month by month',
+          note: '“20s+” and “60s+” are calls that connected and stayed connected for at least that long. Callbacks are requests submitted through the ad. Lead events = calls + callbacks.',
+          head: ['Month', 'Calls', '20s+', '60s+', '60s+ rate', 'Callbacks', 'Lead events'],
+          rows: [
+            ['Month 1', '120', '29', '14', '11.7%', '5', '125'],
+            ['Month 2', '177', '50', '26', '14.7%', '11', '188'],
+            ['Month 3', '199', '58', '41', '20.6%', '27', '226'],
+            ['Combined', '496', '137', '81', '16.3%', '43', '539'],
+          ],
+        },
+        points: [
+          {
+            label: 'The honest boundary',
+            text: 'These are lead-quality signals, not bookings. The website and booking system belong to the franchisor rather than to our client, so we can prove a conversation happened but cannot see the appointment book. We say so rather than implying a booking rate we cannot evidence.',
+          },
+        ],
+      },
+      {
+        kicker: 'The leak',
+        title: '206 calls arrived at a locked door',
+        body: [
+          'Running delivery continuously bought efficiency, and it also meant a large share of calls landed outside opening hours. Across the ninety days, 206 of the 496 calls — 41.5% — arrived when no studio was staffed. In the first two months that was the majority of all call volume: 53.3% and 53.1% respectively.',
+          'At the blended rate those after-hours calls represent roughly $2,100 of media a month ringing into an empty room. The platform stores no phone numbers for call-only ads, so not one of them could be retrieved and called back the next morning. The demand was already bought and paid for; it was being lost between the ad and the desk.',
+          'By month three the after-hours share had dropped sharply to 24.1%, as the customer-level optimisation pulled delivery toward the hours the studios are open. That is a genuine improvement, and it is not a fix. Forty-eight calls a month still arrive after closing, and a smaller leak with a known cause is an argument for plugging it properly rather than for leaving it alone.',
+        ],
+        table: {
+          title: 'When the phone actually rang',
+          note: 'Operating hours as defined by the platform’s time-of-day delivery report.',
+          head: ['Month', 'Calls', 'In studio hours', 'After hours', 'After-hours share'],
+          rows: [
+            ['Month 1', '120', '56', '64', '53.3%'],
+            ['Month 2', '177', '83', '94', '53.1%'],
+            ['Month 3', '199', '151', '48', '24.1%'],
+            ['Combined', '496', '290', '206', '41.5%'],
+          ],
+        },
+        pull: 'The cheapest leads in the account were the ones nobody could answer. Reporting the first half of that sentence alone would have made a better-looking case study and a worse piece of work.',
+      },
+      {
+        kicker: 'Beyond the ads',
+        title: 'So we built the receptionist',
+        body: [
+          'The obvious commercial response to a leak like this is to sell more media. It is also the wrong one: raising spend to generate more calls into an unanswered line multiplies the loss rather than fixing it. The cheaper, larger win was downstream of the ad account entirely — which put it outside any media scope of work, and therefore squarely inside our job.',
+          'We designed, built and shipped an AI voice receptionist that integrates directly with the operator’s existing VoIP phone system. When a studio is closed, it answers the call live. It fields questions using the studio’s actual services and pricing, establishes whether the caller has had extensions before, captures their name and preferred appointment times, and texts them the studio’s direct booking link while they are still interested. Every morning the studio manager receives an email breakdown of the night’s calls — name, number, service requested, preferred times — so the team opens the day with a list instead of a void.',
+          'It was deliberately built to be adopted rather than admired. Setup takes under ninety minutes in total, requires no new contract with the phone provider, and costs roughly $60 to $70 a month in usage across all five studios. That is about three percent of the after-hours media it protects each month. An elegant system the operator will not switch on is worth nothing; this one went live.',
+        ],
+        points: [
+          {
+            label: 'Answers live, at the moment of intent',
+            text: 'The call is picked up when it arrives, not returned the next day. A person researching lash extensions at 9pm is comparing two or three studios that evening, and the one that answers is the one that gets the appointment.',
+          },
+          {
+            label: 'Converts the call into a booking, not a message',
+            text: 'It captures name and preferred times and sends the direct booking link by text immediately, so the enquiry ends in the operator’s own booking flow rather than in a voicemail queue.',
+          },
+          {
+            label: 'Hands the team a worked list each morning',
+            text: 'Next-day email summaries mean no manual listening back, no transcription, and no judgement call about who is worth ringing. The studio manager gets caller, number, service and preferred times, already structured.',
+          },
+          {
+            label: 'Runs for less than the cost of two lost calls',
+            text: '$60–$70 a month across five studios, against roughly $2,100 a month of after-hours media that was previously hitting an unanswered line. The economics were never close.',
+          },
+        ],
+        pull: 'We were engaged to run ads. The single highest-value thing we could build for this business was a phone system that answers at midnight — so that is what we built.',
+      },
+    ],
+    proves: [
+      {
+        title: 'We cut a channel we were being paid to run',
+        text: 'Search was live, spending and reporting conversions, and nobody had asked us to touch it. We moved essentially the entire budget away from it because a lead cost $225 there and $23 elsewhere. An agency structured around a channel does not make that recommendation; someone accountable for the cost per lead has to.',
+      },
+      {
+        title: 'We scaled and reported the cost of scaling',
+        text: 'Cost per call rose from $23.07 to $33.99 as volume went from 120 to 199 a month. That is the real trade of scale, and we put it in the table rather than quoting the opening month as the headline. The number that matters — the operator’s blended cost per lead — fell 41% over the same period.',
+      },
+      {
+        title: 'We owned the outcome past the point where the ads stop',
+        text: 'Generating calls nobody answers is not a result. Building the system that answers them is not performance marketing, was in no scope of work, and was the most valuable work available to this business. End to end means the lead is captured, not just created.',
+      },
+    ],
+    closing:
+      '496 phone calls in ninety days at $30.64 each, from a channel we argued the client into and a budget 20% smaller than where it started — and the 41.5% arriving after closing time now answered, booked and summarised before anyone opens the door.',
     accent: '#c7ff97',
   },
 ];
